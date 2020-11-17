@@ -25,11 +25,14 @@ public class Main {
                 value = false;
 
             } catch (InputMismatchException inputMismatchException) {
-                System.out.printf("Error Input  was incorrect");
-                System.out.printf("Suggestion: You must enter integer value");
+                System.out.printf("Error Input  was incorrect\n");
+                System.out.printf("Suggestion: You must enter integer value\n");
             } catch (ArithmeticException arithmeticException) {
-                System.out.printf("Error ArithmeticException was thrown");
-                System.out.printf("Suggestion: You cannot enter 0");
+                System.out.printf("Error ArithmeticException was thrown\n");
+                System.out.printf("Suggestion: You cannot enter 0\n");
+            }
+            finally {
+                System.out.println("This is the finally statement, cleanup can go on here");
             }
         }while (value);
 
